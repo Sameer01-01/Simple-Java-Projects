@@ -3,6 +3,7 @@ public class BankingApp {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         bankaccount bank1 = new bankaccount("xyz","01");
+        bank1.showmenu();
     } 
 }
 
