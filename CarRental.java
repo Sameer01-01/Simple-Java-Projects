@@ -40,13 +40,25 @@ class Car {
     public void returncar(){
         isavailible = true;
     }
-
-
-
-
-
 }
 
+class Customer{
+    private String customerid;
+    private String name;
+
+    public Customer(String customerid, String name){
+        this.customerid=customerid;
+        this.name=name;
+    }
+
+    public String getcustomerid(){
+        return customerid;
+    }
+
+    public String getname(){
+        return name;
+    }
+}
 
 public class CarRental {
     public static void main(String[] args) {
