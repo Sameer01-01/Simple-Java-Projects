@@ -84,6 +84,22 @@ class Rental{
     }
 
 }
+class Carrentalsystem{
+    private List<Car> cars;
+    private List<Customer> customers;
+    private List<Rental> rentals;
+
+    public void addcar(){
+        cars = new ArrayList<>();
+        customers=new ArrayList<>();
+        rentals=new ArrayList<>();
+    }
+
+    public void addcustomer(Customer customer){
+        customers.add(customer);
+    }
+
+}
 
 
 
