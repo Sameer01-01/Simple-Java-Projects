@@ -204,15 +204,36 @@ class Carrentalsystem{
                         break;
                     }
                 }
-
+                if (cartoreturn!=null){
+                    Customer customer=null;
+                    for(Rental rental : rentals){
+                        if (rental.getcar()==cartoreturn){
+                            customer=rental.getcustomer();
+                            break;
+                        }
+                    }
+                    if(customer!=null){
+                        returncar(cartoreturn);
+                        System.out.println("Car was successfully returned by "+customer.getname());
+                    }
+                    else{
+                        System.out.println("Invalid car ID or car is not rented.");
+                    }
+                }
                 
-
-                
+            }
+            else if(choice==3){
+                break;
+            }
+            else{
+                System.out.println("Invalid choice. Please enter a valid option.");
             }
             
         }
+        System.out.println("Thank you for using the car rental system!!!");
     }
 
+    
 }
 
 
