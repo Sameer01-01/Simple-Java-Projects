@@ -93,7 +93,7 @@ class Carrentalsystem{
     private List<Customer> customers;
     private List<Rental> rentals;
 
-    public void addcar(){
+    public void addcar(Car car){
         cars = new ArrayList<>();
         customers=new ArrayList<>();
         rentals=new ArrayList<>();
@@ -241,6 +241,15 @@ class Carrentalsystem{
 
 public class CarRental {
     public static void main(String[] args) {
-        
+
+        Carrentalsystem rentalsystem=new Carrentalsystem();
+        Car car1=new Car("C0001","Toyota","Fortuner",1000.0);
+        Car car2=new Car("C0002","Range Rover","Defender",2500.0);
+        Car car3=new Car("C0003","Cadillac","Escallade",3500.0);
+        rentalsystem.addcar(car1);
+        rentalsystem.addcar(car2);
+        rentalsystem.addcar(car3);
+
+        rentalsystem.menu();
     }
 }
